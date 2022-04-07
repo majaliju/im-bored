@@ -1,6 +1,8 @@
-# WASICON 
-# "What Artist Should I Check Out Next" 
+# IBAC 
+# "I'm Bored And Confused"
 
-We’ve all been at the point where we fall in love with a band or an artist and exhaust their catalogue. This leads us to the weird point where we know what style we want to hear more of but don’t know where to find similar artists, short of scouring blogs and and YouTube/Spotify for more.
+Rumor has it you're both bored and confused. Otherwise, you wouldn't be on the website right now! 
 
-With WASICON, you type in an artist/band that you're in love with currently and you get back five similar artists! These musical acts are ranked by percentage of closeness to your inputted artist/band. 
+We're here to solve the problem for you: press the button below and instantly, an activity to do will pop up for you!
+
+
