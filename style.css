@@ -1,6 +1,11 @@
+* {
+  color: rgb(240, 240, 252);
+}
+
 body {
   background-color: black;
 }
+
 
 #main-body {
   margin-left: auto;
@@ -8,6 +13,9 @@ body {
 }
 
 h1 {
-  color: rgb(240, 240, 252);
+  color: rgb(255, 165, 217);
   /* margin-left: 20px; */
+}
+#bored-button {
+  color: black;
 }
