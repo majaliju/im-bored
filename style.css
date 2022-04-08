@@ -22,6 +22,7 @@ h1 {
   color: rgb(255, 165, 217);
   /* margin-left: 20px; */
 }
-#bored-button {
+
+button {
   color: black;
 }
