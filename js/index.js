@@ -1,12 +1,24 @@
 // testing out the fetch request with the Michael Jackson object
 
 document.addEventListener('DOMContentLoaded', () => {
-  testFetch();
+  getActivities()
 })
 
+let database 
 
-const testFetch = (() => {
+function getActivities() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
-  .then(data => console.log(data.activity))
-})
+  .then(data => {
+    database = data
+    console.log("activities: ", database)
+    console.log("show activity: ", database.activity)
+  })
+}
+  
+    
+
+
+// add a clickEvent for #bored-button 
+// data.activity 
+// 
