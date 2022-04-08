@@ -1,5 +1,8 @@
 # I'm Bored
 
+_readme in progress_
+
+
 Rumor has it you're both bored. Otherwise, you wouldn't be on the website right now! 
 
 We're here to solve the problem for you: press the button below and instantly, an activity to do will pop up for you!
