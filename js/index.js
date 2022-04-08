@@ -22,13 +22,16 @@ function getActivities() {
 function loadActivity() {
   const boredButton = document.getElementById('bored-button')
 
-  addEventListener('click', (e) => {
+  boredButton.addEventListener('click', (e) => {
     console.log(e.target)
+
   })
+
+
+  // change boredButton's innerText to "I'm still bored!" for reset
 }
     
+function wipeMainBody (){
+  // wipe the mainBody div 
+}
 
-
-// add a clickEvent for #bored-button 
-// data.activity 
-// 
