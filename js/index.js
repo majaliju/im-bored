@@ -1,4 +1,3 @@
-// testing out the fetch request with the Michael Jackson object
 
 document.addEventListener('DOMContentLoaded', () => {
   getActivities()
