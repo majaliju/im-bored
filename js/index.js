@@ -31,7 +31,6 @@ function getActivities() {
     
 // this function clears our mainBody div element
 function wipeMainBody (){
-  const mainBody = document.getElementById("main-body")
   mainBody.innerHTML = ""
 }
 
@@ -46,9 +45,15 @@ function showNewActivity(database){
     mainBody.append(boredButton)
     boredButton.innerText = "I'm still bored!"
     
+    // extra challenge
+    // optimize the writing that avoiding the "blank slate" wiping of mainBody
     // mainBody --> use the new event, no point in clearing
     
 }
 
+// ideas for the 3rd event, to add more functionality 
+
 // store a favorites list
-// add a spacebar event
+// add a spacebar event (event delegation, mentioned by cohort lead Michael)
+
+
