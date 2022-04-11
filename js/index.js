@@ -21,18 +21,19 @@ function getActivities() {
 // our button action, that loads an activity for the user
 
   boredButton.addEventListener('click', (e) => {
-    wipeMainBody()
+    // wipeMainBody()
     getActivities()
     // showNewActivity();
   })
     
-// this function clears our mainBody div element
-function wipeMainBody (){
-  mainBody.innerHTML = ""
-}
+// // this function clears our mainBody div element
+// function wipeMainBody (){
+//   mainBody.innerHTML = ""
+// }
 
 // shows a newActivity on the page
 function showNewActivity(database){
+    mainBody.innerHTML = ""
     const h1 = document.createElement('h1')
     const h2 = document.createElement('h2')
     mainBody.append(h1)
