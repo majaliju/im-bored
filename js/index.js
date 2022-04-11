@@ -1,13 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-})
 
 
 // define some variables globally for easier use later
 const mainBody = document.getElementById("main-body")
 const boredButton = document.getElementById('bored-button')
-
 
 // our first function, stores the data in a variable
 // then commences to loadActivity and start our page
@@ -55,5 +52,10 @@ function showNewActivity(database){
 
 // store a favorites list
 // add a spacebar event (event delegation, mentioned by cohort lead Michael)
+
+
+
+})
+
 
 
