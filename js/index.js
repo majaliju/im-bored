@@ -1,8 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-
-
-// define some variables globally for easier use later
+// define some variables "globally' for easier use later
 const mainBody = document.getElementById("main-body")
 const boredButton = document.getElementById('bored-button')
 
@@ -21,15 +19,9 @@ function getActivities() {
 // our button action, that loads an activity for the user
 
   boredButton.addEventListener('click', (e) => {
-    // wipeMainBody()
     getActivities()
-    // showNewActivity();
   })
-    
-// // this function clears our mainBody div element
-// function wipeMainBody (){
-//   mainBody.innerHTML = ""
-// }
+
 
 // shows a newActivity on the page
 function showNewActivity(database){
@@ -42,10 +34,6 @@ function showNewActivity(database){
     h2.innerText = `For the ${database.type} lovers`
     mainBody.append(boredButton)
     boredButton.innerText = "I'm still bored!"
-    
-    // extra challenge
-    // optimize the writing that avoiding the "blank slate" wiping of mainBody
-    // mainBody --> use the new event, no point in clearing
     
 }
 
