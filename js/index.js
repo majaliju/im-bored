@@ -14,7 +14,6 @@ function getActivities() {
   .then(response => response.json())
   .then(data => {
     showNewActivity(data)
-    // addToFavorites(data)
   })
 }
 
@@ -48,11 +47,11 @@ function showNewActivity(database){
 }
 
 function addToFavorites(database){
-  fetch("http://www.boredapi.com/api/activity/")
-  .then(response => response.json())
-  .then(data => {
-    const database = data
-  })
+  // fetch("http://www.boredapi.com/api/activity/")
+  // .then(response => response.json())
+  // .then(data => {
+  //   const database = data
+  // })
 
   // show fav-button once it exists
   // favButton.style.display = block;
