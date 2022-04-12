@@ -4,25 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
 const mainBody = document.getElementById("main-body")
 const boredButton = document.getElementById('bored-button')
 
-// our first function, stores the data in a variable
-// then commences to showNewActivity() and starts our process
+// get our activity, then call the showNewActivity function
+// which will display the activity
 function getActivities() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
   .then(data => {
-    console.log("data: ", data)
+    // console.log("data: ", data)
     showNewActivity(data)
   })
 }
 
-// our button action, that loads an activity for the user
-
-
+// note to add element
 // add a spacebar event (event delegation, mentioned by cohort lead Michael)
   boredButton.addEventListener('click', (e) => {
     getActivities()
   })
 
+  favsButton.addEventListener('click', (e) => {
+    // add to favorites and also show a 
+  })
 
 // shows a newActivity on the page
 function showNewActivity(database){
@@ -38,9 +39,7 @@ function showNewActivity(database){
     
 }
 
-// ideas for the 3rd event, to add more functionality 
 
-// store a favorites list
 
 
 
