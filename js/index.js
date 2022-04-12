@@ -2,7 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 // define some variables "globally' for easier use later
 const mainBody = document.getElementById("main-body")
+const favsList = document.getElementById("favs-list")
 const boredButton = document.getElementById('bored-button')
+const favButton = document.getElementById('fav-button')
 
 // get our activity, then call the showNewActivity function
 // which will display the activity
@@ -12,6 +14,7 @@ function getActivities() {
   .then(data => {
     // console.log("data: ", data)
     showNewActivity(data)
+    addToFavorites(data)
   })
 }
 
@@ -21,8 +24,12 @@ function getActivities() {
     getActivities()
   })
 
-  favsButton.addEventListener('click', (e) => {
-    // add to favorites and also show a 
+  favButton.addEventListener('click', (e) => {
+    getActivities()
+    // add to favorites and also show prior entries
+    console.log("e.target: ", e.target)
+    addToFavorites()
+    console.log('addToFavorites: ', addToFavorites())
   })
 
 // shows a newActivity on the page
@@ -39,11 +46,23 @@ function showNewActivity(database){
     
 }
 
+function addToFavorites(database){
+  // show fav-button once it exists
+  // favButton.style.display = block;
+  const ul = document.createElement('ul')
+  const li = document.createElement('li')
+  favsList.append(ul)
+  ul.append(li)
+  li.innerText = database.activity
 
 
+  // store to a DOM node --> text =${database.activity} to show that activity
+  // keep a numbered list
+}
 
 
 })
+
 
 
 

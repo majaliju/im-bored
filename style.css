@@ -6,16 +6,25 @@
 body {
   background-color: black;
 
-  /* center the #main-body content */
+  margin-top: auto;
+
+  /* display: flex will center the #main-body content */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 
 #main-body {
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
+  width: auto; 
+  
+}
+
+#favs-list {
+
 }
 
 h1 {
@@ -25,4 +34,8 @@ h1 {
 
 button {
   color: black;
+}
+
+#fav-button {
+  /* display: none; */
 }
