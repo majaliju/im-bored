@@ -5,7 +5,7 @@ const mainBody = document.getElementById("main-body")
 const boredButton = document.getElementById('bored-button')
 
 // our first function, stores the data in a variable
-// then commences to loadActivity and start our page
+// then commences to showNewActivity() and starts our process
 function getActivities() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
@@ -13,11 +13,12 @@ function getActivities() {
     console.log("data: ", data)
     showNewActivity(data)
   })
-
 }
 
 // our button action, that loads an activity for the user
 
+
+// add a spacebar event (event delegation, mentioned by cohort lead Michael)
   boredButton.addEventListener('click', (e) => {
     getActivities()
   })
@@ -40,7 +41,6 @@ function showNewActivity(database){
 // ideas for the 3rd event, to add more functionality 
 
 // store a favorites list
-// add a spacebar event (event delegation, mentioned by cohort lead Michael)
 
 
 
