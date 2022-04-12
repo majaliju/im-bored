@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 // define some variables "globally' for easier use later
 const mainBody = document.getElementById("main-body")
+const favsBody = document.getElementById('favs-body')
 const favsList = document.getElementById("favs-list")
 const boredButton = document.getElementById('bored-button')
 const favButton = document.getElementById('fav-button')
@@ -12,20 +13,18 @@ function getActivities() {
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
   .then(data => {
-    // console.log("data: ", data)
     showNewActivity(data)
-    addToFavorites(data)
+    // addToFavorites(data)
   })
 }
 
-// note to add element
-// add a spacebar event (event delegation, mentioned by cohort lead Michael)
+  // our boredButton event
   boredButton.addEventListener('click', (e) => {
     getActivities()
   })
 
+  // our favorites-list button event
   favButton.addEventListener('click', (e) => {
-    getActivities()
     // add to favorites and also show prior entries
     console.log("e.target: ", e.target)
     addToFavorites()
@@ -43,18 +42,25 @@ function showNewActivity(database){
     h2.innerText = `For the ${database.type} lovers`
     mainBody.append(boredButton)
     boredButton.innerText = "I'm still bored!"
+    mainBody.append(favButton)
+    favButton.innerText = "Save for later!"
     
 }
 
 function addToFavorites(database){
+  fetch("http://www.boredapi.com/api/activity/")
+  .then(response => response.json())
+  .then(data => {
+    const database = data
+  })
+
   // show fav-button once it exists
   // favButton.style.display = block;
-  const ul = document.createElement('ul')
   const li = document.createElement('li')
-  favsList.append(ul)
-  ul.append(li)
+  favsList.append(li)
   li.innerText = database.activity
 
+  // issue here is two nodes are created: one empty, one populated
 
   // store to a DOM node --> text =${database.activity} to show that activity
   // keep a numbered list
