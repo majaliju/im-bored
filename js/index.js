@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 // define some variables "globally' for easier use later
 const mainBody = document.getElementById("main-body")
@@ -7,25 +6,26 @@ const favsList = document.getElementById("favs-list")
 const boredButton = document.getElementById('bored-button')
 const favButton = document.getElementById('fav-button')
 
+let database 
+
+// our boredButton event
+boredButton.addEventListener('click', (e) => {
+  getNewActivity()
+})
+
+
 // get our activity, then call the showNewActivity function
 // which will display the activity
-function getActivities() { 
+function getNewActivity() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
-  .then(data => {
-    showNewActivity(data)
-  })
+  .then(data => showNewActivity(data))
 }
 
-  // our boredButton event
-  boredButton.addEventListener('click', (e) => {
-    getActivities()
-  })
 
-  // our favorites-list button event
-  favButton.addEventListener('click', (e) => {
+// our favorites-list button event
+favButton.addEventListener('click', (e) => {
     // add to favorites and also show prior entries
-    console.log("e.target: ", e.target)
     addToFavorites()
     console.log('addToFavorites: ', addToFavorites())
   })
@@ -46,23 +46,22 @@ function showNewActivity(database){
     
 }
 
-function addToFavorites(database){
+// this function should add the shown-above-item to the favs-list
+// but not refresh the page or move on to the next action
+
+function addToFavorites(){
   // fetch("http://www.boredapi.com/api/activity/")
   // .then(response => response.json())
   // .then(data => {
   //   const database = data
   // })
 
-  // show fav-button once it exists
-  // favButton.style.display = block;
+
   const li = document.createElement('li')
   favsList.append(li)
-  li.innerText = database.activity
+  li.innerText = data.activity
 
-  // issue here is two nodes are created: one empty, one populated
 
-  // store to a DOM node --> text =${database.activity} to show that activity
-  // keep a numbered list
 }
 
 
