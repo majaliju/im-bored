@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  
 // define some variables "globally' for easier use later
 const mainBody = document.getElementById("main-body")
 const favsBody = document.getElementById('favs-body')
@@ -28,8 +30,6 @@ function getNewActivity() {
   .then(response => response.json())
   .then(data => showNewActivity(data))
 }
-
-
 
 
 // shows a newActivity on the page
@@ -63,7 +63,4 @@ function addToFavorites(database){
   li.innerText = database.activity
 }
 })
-
-
-
 
