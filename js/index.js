@@ -1,12 +1,3 @@
-/* we have 3 issues that need to be fixed:
-(1) need to eliminate the duplicate LI that appears on the click event on favButton
-(2) need to eliminate the activity-history that appears on favButton click event
-  --> each click event should only save the current activity onto favsList
-(3) need to have the favButton hidden on start-up, only activated once the boredButton is clicked
-
-*/
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
 // define some variables 'globally' for easier use later
@@ -27,14 +18,8 @@ boredButton.addEventListener('click', (e) => {
 function getNewActivity() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
-  .then(data => console.log(data))
   .then(data => showNewActivity(data))
-
-
-  // maybe place an if-favButton-event-clicked, here?
-
 }
-
 
 // shows a newActivity on the page
 function showNewActivity(database){
@@ -47,13 +32,14 @@ function showNewActivity(database){
     h2.innerText = `For the ${database.type} lovers`
     mainBody.append(boredButton)
     boredButton.innerText = "I'm still bored!"
+
+    const favButton = document.createElement('button')
     mainBody.append(favButton)
     favButton.innerText = "Save for later!"
-
       // our favorites-list button event
-  favButton.addEventListener('click', (e) => {
-    // favButton.style.display = "block"
-    addToFavorites(database)
+      favButton.addEventListener('click', (e) => {
+        console.log("database: ", database)
+        addToFavorites(database)
   })
     
 }
