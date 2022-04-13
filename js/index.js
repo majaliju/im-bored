@@ -6,7 +6,14 @@ const favsList = document.getElementById("favs-list")
 const boredButton = document.getElementById('bored-button')
 const favButton = document.getElementById('fav-button')
 
-let database 
+// // establish our stored first object
+// let database;
+
+// // we launch our first activity, stored in database
+// fetch("http://www.boredapi.com/api/activity/")
+//   .then(response => response.json())
+//   .then(data => database = data)
+//   .then(() => console.log(database))
 
 // our boredButton event
 boredButton.addEventListener('click', (e) => {
@@ -25,8 +32,7 @@ function getNewActivity() {
 
 // our favorites-list button event
 favButton.addEventListener('click', (e) => {
-    // add to favorites and also show prior entries
-    addToFavorites()
+    addToFavorites(database)
     console.log('addToFavorites: ', addToFavorites())
   })
 
@@ -49,21 +55,11 @@ function showNewActivity(database){
 // this function should add the shown-above-item to the favs-list
 // but not refresh the page or move on to the next action
 
-function addToFavorites(){
-  // fetch("http://www.boredapi.com/api/activity/")
-  // .then(response => response.json())
-  // .then(data => {
-  //   const database = data
-  // })
-
-
+function addToFavorites(database){
   const li = document.createElement('li')
   favsList.append(li)
-  li.innerText = data.activity
-
-
+  li.innerText = database.activity
 }
-
 
 })
 
