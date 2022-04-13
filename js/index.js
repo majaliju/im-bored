@@ -30,11 +30,7 @@ function getNewActivity() {
 }
 
 
-// our favorites-list button event
-favButton.addEventListener('click', (e) => {
-    addToFavorites(database)
-    console.log('addToFavorites: ', addToFavorites())
-  })
+
 
 // shows a newActivity on the page
 function showNewActivity(database){
@@ -49,6 +45,12 @@ function showNewActivity(database){
     boredButton.innerText = "I'm still bored!"
     mainBody.append(favButton)
     favButton.innerText = "Save for later!"
+
+      // our favorites-list button event
+  favButton.addEventListener('click', (e) => {
+    addToFavorites(database)
+    console.log('addToFavorites: ', addToFavorites())
+  })
     
 }
 
@@ -60,7 +62,6 @@ function addToFavorites(database){
   favsList.append(li)
   li.innerText = database.activity
 }
-
 })
 
 
