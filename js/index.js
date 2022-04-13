@@ -33,19 +33,16 @@ function showNewActivity(database){
     mainBody.append(boredButton)
     boredButton.innerText = "I'm still bored!"
 
+    // create our favButton, which will save items for later
     const favButton = document.createElement('button')
     mainBody.append(favButton)
     favButton.innerText = "Save for later!"
-      // our favorites-list button event
+      
       favButton.addEventListener('click', (e) => {
-        console.log("database: ", database)
         addToFavorites(database)
+        // add a functionality that doesn't allow user to add the same element twice
   })
-    
 }
-
-// this function should add the shown-above-item to the favs-list
-// but not refresh the page or move on to the next action
 
 function addToFavorites(database){
   const li = document.createElement('li')

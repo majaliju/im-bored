@@ -33,9 +33,3 @@ h1 {
 button {
   color: black;
 }
-
-#fav-button {
-  /* goal is to have button hidden on load */
-
-  /* display: none;   */
-}
