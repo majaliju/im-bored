@@ -7,21 +7,21 @@ const favsList = document.getElementById("favs-list")
 const boredButton = document.getElementById('bored-button')
 const favButton = document.getElementById('fav-button')
 
-// our boredButton event
+// our `I'm still bored!' button that brings user a new activity
 boredButton.addEventListener('click', (e) => {
   getNewActivity()
 })
 
-
-// get our activity, then call the showNewActivity function
-// which will display the activity
+// calls the API for a new activity
+// then shows that activity on the page
 function getNewActivity() { 
   fetch("http://www.boredapi.com/api/activity/")
   .then(response => response.json())
   .then(data => showNewActivity(data))
 }
 
-// shows a newActivity on the page
+// shows a new activity on the page
+// also adds the `Save for later!` button for user
 function showNewActivity(database){
     mainBody.innerHTML = ""
     const h1 = document.createElement('h1')
@@ -40,7 +40,7 @@ function showNewActivity(database){
       
       favButton.addEventListener('click', (e) => {
         addToFavorites(database)
-        // add a functionality that doesn't allow user to add the same element twice
+        favButton.disabled = true;
   })
 }
 
@@ -48,6 +48,7 @@ function addToFavorites(database){
   const li = document.createElement('li')
   favsList.append(li)
   li.innerText = database.activity
+
 }
 })
 
