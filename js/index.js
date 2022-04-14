@@ -40,7 +40,8 @@ function showNewActivity(database){
       
       favButton.addEventListener('click', (e) => {
         addToFavorites(database)
-        favButton.disabled = true;
+        favButton.disabled = true
+        favButton.innerText = "Saved!"
   })
 }
 
