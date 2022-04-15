@@ -1,5 +1,5 @@
 # **I'M BORED**
-<img src="https://img.shields.io/badge/MAJALIJU-creator-brightgreen">
+<!-- <img src="https://img.shields.io/badge/MAJALIJU-creator-brightgreen"> -->
 <img src="https://img.shields.io/badge/phase1-project-blue">
 
 ___
