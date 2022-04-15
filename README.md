@@ -4,7 +4,7 @@
 This is a website for people who are currently bored. They can find a slew of activities to help themselves pass the time, in a meaningful way!
 
 ## WHERE?
-[Click here to find an activity to do!](https://MAJALIJU.COM/im-bored)
+[Click here to find an activity to do!](http://MAJALIJU.COM/im-bored)
 
 
 
