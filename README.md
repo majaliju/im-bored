@@ -13,7 +13,7 @@ This is a website for people who are currently bored. They can find a slew of ac
 ## **HOW**
 It's very simple!
 
-Simply click the button that says *I'm Bored!'* and click away until you find something good! If you like it, click the *Save for later!* button and it'll add your activity to a list. Then keep click away until you develop a nice list of activities. 
+Simply click the button that says *I'm Bored!* and click away until you find something good! If you like it, click the *Save for later!* button and it'll add your activity to a list. Then keep click away until you develop a nice list of activities. 
 
 The main activity will be in pink, and underneath it you'll see what type of activity it is.
 
